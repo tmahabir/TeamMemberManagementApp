@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style-edit.css' %}?{% now 'U' %}">
+	
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+	<title>Edit Admin</title>
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+
+			<a href="{% url 'list' %}">
+				<i class="fas fa-chevron-circle-left back-btn"></i>
+			</a>
+
+			<div class="header_info">
+				<h1 class="name">Edit team member</h1>
+				<h4 class="subtitle">Edit contact info, and role.</h4>
+			</div>
+		</header>
+
+		<hr>
+
+		<form action="" method="POST">
+			{% csrf_token %}
+			<section class="contact-info">
+				<h4>Info</h4>
+				<div class="info-line">
+					<input type="text" class="type" name="firstName" placeholder="First Name" value="{{ member.first_name}}">
+				</div>
+
+				<div class="info-line">
+					<input type="text" class="type" name="lastName" placeholder="Last Name" value="{{ member.last_name}}">
+				</div>
+
+				<div class="info-line">
+					<input type="email" class="type" name="email" placeholder="Email" value="{{ member.email }}">
+				</div>
+
+				<div class="info-line">
+					<input type="tel" class="type" name="phoneNumber" placeholder="Phone Number" value="{{member.phone_number}}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+				</div>
+
+				<h4>Role</h4>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<label class="roleLabel">Regular - Can't delete members</label>
+						<input type="radio" class="checkBox" name="isAdmin" value="regular">
+					</div>
+				</div>
+				<hr>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<label class="roleLabel">Admin - Can delete members</label>
+						<input type="radio" class="checkBox" name="isAdmin" value="admin" checked>
+					</div>
+				</div>
+				<hr>
+			</section>
+
+			<section class="button-container">
+				<button class="button"name="saveBtn" >Save</button>
+			</section>
+		</form>
+
+		<form action="" method="POST">
+			{% csrf_token %}
+			<section class="button-container">
+				<button class="dButton"name="deleteBtn" >Delete</button>
+			</section>
+		</form>
+	</div>
+</body>
+</html>

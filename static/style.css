@@ -1,0 +1,94 @@
+body{
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}
+
+.container{
+	max-width: 428px;
+	margin: 0 auto;
+	background-color: #fff;
+	height: 100vh;
+}
+
+a{
+	text-decoration: none;
+}
+
+.header{
+	display: flex;
+	justify-content: space-evenly;
+	color: #000;
+	background: #fff;
+	padding: 2em 0;
+	align-items: left;
+}
+
+.contacts-library{
+	background: #fff;
+}
+
+.add{
+	color: #000;
+	font-size: 1.5em;
+}
+
+.user_head{
+	color: rgb(117, 110, 110);
+	font-size: 1.5em;
+}
+
+i{
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.contact-name{
+	color: #000;
+	font-size: 1.2em;
+	text-align: left;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+hr{
+	border: 1px solicontactd #737679;
+}
+
+.list__item{
+	list-style: none;
+}
+
+.contact_info{
+	color: rgb(88, 86, 86);
+	text-align: left;
+}
+
+.contact-section{
+	display: flex;
+	height: 125px;
+}
+
+.contact-icon{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px 50px 0px 45px;
+	transition: 0.3s;
+}
+
+.contact-details{
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px 0px 0px 0px;
+	transition: 0.3s;
+}
+
+.contact-section:hover{
+	background-color: #dfe4e9;
+}
+

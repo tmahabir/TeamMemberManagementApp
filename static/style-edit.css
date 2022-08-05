@@ -1,0 +1,120 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}
+
+.container{
+	max-width: 428px;
+	margin: 0 auto;
+	background-color: #fff;
+	min-height: 100vh;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+
+.hero{
+	color: #000;
+	background: #fff;
+	padding: 2em 0; 
+	align-items: left;
+}
+
+.header{
+	display: flex;
+	justify-content: space-evenly;
+	color: #000;
+	background: #fff;
+	padding: 2em 0;
+	align-items: left;
+}
+
+.back-btn{
+	color: #000;
+	font-size: 1.7em;
+	padding-left: 1em;
+}
+
+.contact-info{
+	padding: 1.5em;
+}
+
+
+.header_info{
+	display: flex;
+	flex-flow: column;
+	align-items: left;
+}
+
+.info-line{
+	display: flex;
+	color: #000;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.8em 2em;
+	margin-top: 2em;
+	border: 2px solid #737679;
+	border-radius: 5px;
+}
+
+hr{
+	border: 1px solicontactd #737679;
+}
+
+
+p{
+	margin: 0;
+	padding-left: 2em;
+}
+
+.type{
+	border: none;
+	background: none;
+	font-size: 1.0em;
+	color: #737679;
+	outline: none;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+.roleLabel{
+	padding: 0px 100px 0px 0px;
+}
+
+.checkBox{
+	float: right;
+}
+
+.subtitle{
+	color: #737679;
+}
+.button{
+	 background-color: #1a73e7;
+	 border: 1px solid #1a73e7;
+	 color: #fff;
+	 font-size: 1.0em;
+	 padding: 0.5em 1.5em;
+	 outline: none;
+	 cursor: pointer;
+	 float: right;
+	 border-radius: 5px;
+}
+
+.dButton{
+	background-color: #fff;
+	border: 1px solid #737679;
+	color: rgb(214, 26, 26);
+	font-size: 1.0em;
+	padding: 0.5em 1.5em;
+	outline: none;
+	cursor: pointer;
+	float: left;
+	border-radius: 5px;
+}

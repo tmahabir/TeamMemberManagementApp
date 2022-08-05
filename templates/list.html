@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}?{% now 'U' %}">
+	
+    <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+
+	<title>List Members</title>
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+
+			<div class="titles">
+				<h1 class="name">Team members</h1>
+				<h4 class="name">You have {{membersCount}} team members.</h4>
+			</div>
+
+			<a href="{% url 'addMember' %}"><i class="fas fa-plus-circle add"></i></a>
+		</header>
+		<hr>
+		<section class="contacts-library">
+			<ul class="contacts-list">
+				{% for member in members %}
+
+				<a href="{% url 'editMember' member.id %}">
+					<div class="contact-section">
+						<div class="contact-icon">
+							<i class="fas fa-user-alt user_head"></i>
+						</div>
+						<div class="contact-details">
+							<li class="list__item">
+								<p class="contact-name">{{ member.first_name | title }} {{ member.last_name | title }} {{member.adminView}}</p>
+								<p class="contact_info">{{ member.phone_number}}</p>
+								<p class="contact_info">{{ member.email}}</p>
+							</li>
+						</div>
+					</div>
+				</a>
+
+				<hr>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+
+</body>
+</html>
