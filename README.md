@@ -3,9 +3,11 @@ Created a simple team member management application using Django
 
 ## How to Run
 1. Download all files
-2. Navigate to project directory in your terminal
-3. Run: python manage.py runserver
-4. That should start the developlment server and go to the link it provides to access the application
+2. Navigate to project directory in your terminal and enter the command below:
+```
+python manage.py runserver
+```
+3. That should start the developlment server and then go to the link it provides to access the application
 
 ## How to Use
 ### Add a member
